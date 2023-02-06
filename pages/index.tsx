@@ -41,7 +41,7 @@ export default function Main() {
                 만들어 보세요.
               </span>
             </p>
-            <Link href="/signin">
+            <Link href="/login">
               <button
                 // onClick={() => router.push('/signin')}
                 className="mt-8 h-12 w-32 rounded-3xl bg-green-500 text-center text-xl text-white"

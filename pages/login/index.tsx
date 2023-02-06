@@ -3,7 +3,7 @@ import { FieldErrors, useForm } from 'react-hook-form';
 import axios from 'axios';
 import Image from 'next/image';
 import loginImage from '/public/login.png';
-// import { signIn, signOut, useSession } from 'next-auth/client';
+import { signIn, signOut, useSession } from 'next-auth/react';
 
 interface LoginForm {
   id: string;
@@ -104,6 +104,14 @@ export default function Login() {
               type="submit"
             >
               로그인
+            </button>
+            <button
+              className="mx-auto mt-8 w-40 rounded-md bg-yellow-500 font-semibold"
+              onClick={() =>
+                signIn('kakao', { callbackUrl: 'http://localhost:3000' })
+              }
+            >
+              카카오로그인
             </button>
           </form>
         </div>

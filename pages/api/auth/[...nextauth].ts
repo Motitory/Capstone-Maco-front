@@ -15,7 +15,7 @@ export default NextAuth({
     }),
   ],
   pages: {
-    signIn: '/tet',
+    signIn: '/login',
     signOut: '/signOut',
     error: '/error',
   },
